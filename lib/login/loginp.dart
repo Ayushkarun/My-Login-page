@@ -21,8 +21,6 @@ class MyWidget extends StatelessWidget {
         title: Text("Login page"),
         centerTitle: true,
       ),
-   
-
 
       ///Body start
       body: Center(
@@ -32,9 +30,8 @@ class MyWidget extends StatelessWidget {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.center, // Centering elements
-          
+
               children: [
-                
                 Icon(
                   Icons.person,
                   size: 150,
@@ -65,6 +62,7 @@ class MyWidget extends StatelessWidget {
                 TextField(
                   controller: passwordcontroller,
                   obscureText: true,
+                  keyboardType: TextInputType.number, //number keyboard
                   decoration: InputDecoration(
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(30),
@@ -84,7 +82,7 @@ class MyWidget extends StatelessWidget {
                 // Login Button
                 ElevatedButton(
                   onPressed: () {
-                    Login(context);
+                    login(context);
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.blue,
@@ -123,17 +121,41 @@ class MyWidget extends StatelessWidget {
     );
   }
 
-  void Login(BuildContext context) {
-    if (Username == usernamecontroller.text &&
-        Password == passwordcontroller.text) {
+  void login(BuildContext context) {
+    String username = usernamecontroller.text;
+    String password = passwordcontroller.text;
+
+    if (username.isEmpty && password.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text("No username and password entered")),
+      );
+      return;
+    }
+    if (username.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text("Username is not entered")),
+      );
+      return;
+    }
+
+    if (password.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text("Password is not entered")),
+      );
+      return;
+    }
+
+    if (username == Username && password == Password) {
       Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => Screen2(),
-          ));
+        context,
+        MaterialPageRoute(
+          builder: (context) => Screen2(),
+        ),
+      );
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text("Password or Email is incorrect")));
+        SnackBar(content: Text("Username or Password is incorrect")),
+      );
     }
   }
 }
