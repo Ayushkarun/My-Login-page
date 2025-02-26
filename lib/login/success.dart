@@ -102,68 +102,9 @@ class Screen2 extends StatelessWidget {
                     child: const Row(
                       children: [Text("Sign-out",style: TextStyle(color: Colors.blue),), Icon(Icons.logout,color: Colors.blue)],
                     )),
-              )
-                    ],
-            
-                  ),
-          )
-      ),
-    );
+                 )],
+            ),)
+      ),);
   }
 }
 
-
-/*
-mainAxisAlignment
-child 
-children
-
-Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            //mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Container(
-            //margin: EdgeInsets.fromLTRB(20,13,43,12),//for giving margin space to all
-            //padding: EdgeInsets.all(20),
-            height: 100,
-            width: 100,
-            //width: double.infinity,
-            color: Colors.white,
-            child: Text('One'),
-          ),
-             SizedBox(height:10,),
-             //SizedBox(width:10,), for raw
-          Container(
-              color: Colors.blue,
-              height: 100,
-              width: 100,
-              child: Text('Ayush')),
-              SizedBox(height:10,),
-          Container(
-              color: Colors.red,
-               height: 100, width: 100,
-                child: Text('Ayush'))
-        ],
-      )
-
-      Row(
-                children: [
-                  Padding(padding: EdgeInsets.fromLTRB(25, 25, 25, 25)),
-                  Icon(
-                    Icons.email,
-                    //size: 100,
-                    color: Colors.blue,
-                  ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Text(
-                    'ayushkarun2580@gmail.com',
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.blue,
-                    ),
-                  )
-                ],
-              )
-*/
