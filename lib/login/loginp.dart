@@ -83,6 +83,8 @@ class MyWidget extends StatelessWidget {
                 ElevatedButton(
                   onPressed: () {
                     login(context);
+                    usernamecontroller.clear();
+                    passwordcontroller.clear();   
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.blue,
