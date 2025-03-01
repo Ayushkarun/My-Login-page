@@ -1,5 +1,4 @@
 // ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 
 class Screen2 extends StatelessWidget {
@@ -51,8 +50,8 @@ class Screen2 extends StatelessWidget {
                         color: Colors.white,
                       ),
                     )
-                    )
-                    ),
+                  )
+                ),
             Card(
                 color: Colors.black,
                 margin: EdgeInsets.all(15),
@@ -70,8 +69,8 @@ class Screen2 extends StatelessWidget {
                         color: Colors.white,
                       ),
                     )
-                    )
-                    ),
+                  )
+                ),
             Card(
                 color: Colors.black,
                 margin: EdgeInsets.all(15),
@@ -90,7 +89,7 @@ class Screen2 extends StatelessWidget {
                         color: Colors.white,
                       ),
                     )
-                    )
+                  )
                 ),
                  SizedBox(
                 width: 126,
