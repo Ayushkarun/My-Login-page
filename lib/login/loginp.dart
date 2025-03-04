@@ -21,7 +21,6 @@ class MyWidget extends StatelessWidget {
         title: Text("Login page"),
         centerTitle: true,
       ),
-
       ///Body start
       body: Center(
         child: Padding(
@@ -30,15 +29,12 @@ class MyWidget extends StatelessWidget {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.center, // Centering elements
-
               children: [
                 Icon(
                   Icons.person,
                   size: 150,
                 ),
-
                 SizedBox(height: 13.5),
-
                 // Username Field
                 TextField(
                   controller: usernamecontroller,
@@ -55,9 +51,7 @@ class MyWidget extends StatelessWidget {
                     prefixIcon: Icon(Icons.person),
                   ),
                 ),
-
-                SizedBox(height: 10),
-
+                SizedBox(height: 10), //for space
                 // Password Field
                 TextField(
                   controller: passwordcontroller,
@@ -76,9 +70,7 @@ class MyWidget extends StatelessWidget {
                     prefixIcon: Icon(Icons.lock),
                   ),
                 ),
-
                 SizedBox(height: 13),
-
                 // Login Button
                 ElevatedButton(
                   onPressed: () {
@@ -122,7 +114,6 @@ class MyWidget extends StatelessWidget {
       ),
     );
   }
-
   void login(BuildContext context) {
     String username = usernamecontroller.text;
     String password = passwordcontroller.text;
@@ -154,7 +145,9 @@ class MyWidget extends StatelessWidget {
           builder: (context) => Screen2(),
         ),
       );
-    } else {
+    } 
+    else
+    {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text("Username or Password is incorrect")),
       );
